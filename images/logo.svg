@@ -1,15 +1,21 @@
-<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+<svg width="220" height="60" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="trainGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#FF6B00;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
     </linearGradient>
   </defs>
   
-  <!-- Lightning Bolt Icon -->
-  <path d="M 15 10 L 25 30 L 20 30 L 30 50 L 20 50 L 10 30 L 15 30 Z" fill="url(#logoGradient)" stroke="#000" stroke-width="1"/>
+  <!-- Lightning Bolt Icon with orange outline -->
+  <path d="M 12 8 L 22 28 L 17 28 L 27 48 L 17 48 L 7 28 L 12 28 Z" 
+        fill="url(#trainGradient)" 
+        stroke="#FF6B00" 
+        stroke-width="1.5"
+        stroke-linejoin="round"/>
   
-  <!-- ProTrain Text -->
-  <text x="40" y="38" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#000">PRO</text>
-  <text x="40" y="38" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#logoGradient)">TRAIN</text>
+  <!-- PRO Text in Black -->
+  <text x="38" y="42" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#000000">PRO</text>
+  
+  <!-- TRAIN Text with Gradient (T overlaps O slightly) -->
+  <text x="38" y="42" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="url(#trainGradient)">TRAIN</text>
 </svg>

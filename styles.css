@@ -54,30 +54,19 @@ body {
 }
 
 .nav-brand {
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: var(--primary-color);
     display: flex;
     align-items: center;
-    gap: 0.75rem;
 }
 
 .logo-img {
-    height: 45px;
+    height: 50px;
     width: auto;
     transition: transform 0.3s ease;
+    display: block;
 }
 
 .logo-img:hover {
-    transform: scale(1.05) rotate(5deg);
-}
-
-.logo-text {
-    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    transform: scale(1.05);
 }
 
 .btn-nav {
@@ -98,7 +87,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+    background: #000000;
     color: var(--bg-white);
     padding: 4rem 0 6rem;
     text-align: center;
@@ -113,10 +102,12 @@ body {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 20% 50%, rgba(255, 107, 0, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 30% 30%, rgba(255, 107, 0, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 70% 70%, rgba(255, 215, 0, 0.12) 0%, transparent 60%),
+        radial-gradient(circle at 50% 50%, rgba(255, 107, 0, 0.08) 0%, transparent 80%);
     animation: pulse 4s ease-in-out infinite;
     pointer-events: none;
+    opacity: 0.8;
 }
 
 @keyframes pulse {
@@ -159,9 +150,19 @@ body {
 
 .hero-athlete-img {
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
     height: auto;
-    filter: drop-shadow(0 10px 30px rgba(255, 107, 0, 0.3));
+    filter: drop-shadow(0 15px 40px rgba(255, 107, 0, 0.5));
+    animation: float 3s ease-in-out infinite, glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { 
+        filter: drop-shadow(0 15px 40px rgba(255, 107, 0, 0.5));
+    }
+    50% { 
+        filter: drop-shadow(0 20px 50px rgba(255, 215, 0, 0.6));
+    }
 }
 
 .hero-title {
@@ -285,7 +286,9 @@ section {
 
 /* Problem Section */
 .problem-section {
-    background-color: var(--bg-light);
+    background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 50%, #f8f8f8 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
     position: relative;
 }
 
@@ -296,13 +299,16 @@ section {
     right: 0;
     bottom: 0;
     background-image: 
-        repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 107, 0, 0.03) 10px, rgba(255, 107, 0, 0.03) 20px);
+        repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(255, 107, 0, 0.04) 15px, rgba(255, 107, 0, 0.04) 30px),
+        repeating-linear-gradient(-45deg, transparent, transparent 20px, rgba(255, 215, 0, 0.02) 20px, rgba(255, 215, 0, 0.02) 40px);
     pointer-events: none;
+    opacity: 0.6;
 }
 
 .section-pattern.reverse {
     background-image: 
-        repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255, 107, 0, 0.03) 10px, rgba(255, 107, 0, 0.03) 20px);
+        repeating-linear-gradient(-45deg, transparent, transparent 15px, rgba(255, 107, 0, 0.04) 15px, rgba(255, 107, 0, 0.04) 30px),
+        repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255, 215, 0, 0.02) 20px, rgba(255, 215, 0, 0.02) 40px);
 }
 
 .problem-grid {
@@ -365,7 +371,8 @@ section {
 
 /* System Section */
 .system-section {
-    background-color: var(--bg-white);
+    background: linear-gradient(180deg, #ffffff 0%, #fafafa 50%, #ffffff 100%);
+    background-size: 100% 200%;
     position: relative;
 }
 
@@ -442,7 +449,10 @@ section {
 
 /* Audience Section */
 .audience-section {
-    background-color: var(--bg-light);
+    background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 50%, #f8f8f8 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
+    position: relative;
 }
 
 .audience-grid {
@@ -590,7 +600,10 @@ section {
 
 /* Testimonials Section */
 .testimonials-section {
-    background-color: var(--bg-light);
+    background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 50%, #f8f8f8 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
+    position: relative;
 }
 
 .testimonials-grid {
@@ -744,26 +757,62 @@ section {
 
 /* Booking Page Styles */
 .booking-hero {
-    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    background: #000000;
     color: var(--bg-white);
     padding: 3rem 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.booking-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(255, 107, 0, 0.12) 0%, transparent 60%),
+        radial-gradient(circle at 70% 70%, rgba(255, 215, 0, 0.1) 0%, transparent 60%);
+    animation: pulse 4s ease-in-out infinite;
+    pointer-events: none;
 }
 
 .booking-title {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
     margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 .booking-subtitle {
     font-size: clamp(1rem, 2vw, 1.2rem);
     color: #e0e0e0;
+    position: relative;
+    z-index: 1;
 }
 
 .booking-form-section {
     padding: 4rem 0;
-    background-color: var(--bg-light);
+    background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 50%, #f8f8f8 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+    position: relative;
+}
+
+.booking-form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255, 107, 0, 0.02) 20px, rgba(255, 107, 0, 0.02) 40px);
+    pointer-events: none;
+    opacity: 0.5;
 }
 
 .form-container {
@@ -775,6 +824,7 @@ section {
     box-shadow: 0 8px 30px rgba(0,0,0,0.12);
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
 .form-container::before {
