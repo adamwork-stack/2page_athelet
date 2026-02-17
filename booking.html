@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply for ProTrain Speed Training Program - Get faster in 90 days or you don't pay.">
+    <meta name="keywords" content="athlete training application, speed training signup, ProTrain booking">
+    <meta name="author" content="ProTrain">
+    <title>Apply Now - ProTrain Speed Training</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" style="text-decoration: none; color: inherit;">PROTRAIN</a>
+            </div>
+            <a href="index.html" class="btn-nav">Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Booking Hero -->
+    <section class="booking-hero">
+        <div class="container">
+            <h1 class="booking-title">Apply for ProTrain Speed Training</h1>
+            <p class="booking-subtitle">Limited spots available. Complete the form below to secure your place.</p>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-form-section">
+        <div class="container">
+            <div class="form-container">
+                <!-- GoHighLevel Form Embed Area -->
+                <div id="ghl-form-container" class="ghl-form-wrapper">
+                    <!-- This is where the GoHighLevel form will be embedded -->
+                    <!-- Replace with your actual GHL form embed code -->
+                    <div class="ghl-placeholder">
+                        <p class="ghl-placeholder-text">GoHighLevel Form Embed</p>
+                        <p class="ghl-placeholder-note">Replace this section with your GHL form embed code</p>
+                    </div>
+                </div>
+
+                <!-- Custom Form (Fallback/Alternative) -->
+                <form id="booking-form" class="booking-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
+                        <small class="form-help">We'll verify your phone number for security</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="athleteAge">Athlete Age *</label>
+                        <select id="athleteAge" name="athleteAge" required>
+                            <option value="">Select Age</option>
+                            <option value="13-14">13-14</option>
+                            <option value="15-16">15-16</option>
+                            <option value="17-18">17-18</option>
+                            <option value="19+">19+</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sport">Primary Sport *</label>
+                        <select id="sport" name="sport" required>
+                            <option value="">Select Sport</option>
+                            <option value="football">Football</option>
+                            <option value="track">Track & Field</option>
+                            <option value="basketball">Basketball</option>
+                            <option value="soccer">Soccer</option>
+                            <option value="baseball">Baseball</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currentTime">Current 40-Yard Dash Time (if applicable)</label>
+                        <input type="text" id="currentTime" name="currentTime" placeholder="e.g., 4.8 seconds">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="goals">What are your speed goals? *</label>
+                        <textarea id="goals" name="goals" rows="4" required placeholder="Tell us about your goals and why you want to get faster..."></textarea>
+                    </div>
+
+                    <!-- SMS Consent Checkbox (A2P/10DLC Compliance) -->
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="smsConsent" name="smsConsent" required>
+                            <span class="checkbox-text">
+                                I consent to receive SMS/text messages from ProTrain at the phone number provided above. 
+                                Message and data rates may apply. Message frequency varies. 
+                                Reply STOP to opt-out, HELP for help. 
+                                <strong>By checking this box, I agree to receive automated text messages.</strong>
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Privacy Policy & Terms Consent -->
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="privacyConsent" name="privacyConsent" required>
+                            <span class="checkbox-text">
+                                I have read and agree to the 
+                                <a href="privacy.html" target="_blank" class="form-link">Privacy Policy</a> 
+                                and 
+                                <a href="terms.html" target="_blank" class="form-link">Terms & Conditions</a>. *
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- TCPA Compliance Notice -->
+                    <div class="tcpa-notice">
+                        <p><strong>TCPA Compliance:</strong> By providing your phone number and checking the SMS consent box above, you consent to receive automated marketing text messages from ProTrain. Consent is not a condition of purchase. Message and data rates may apply.</p>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-submit">Submit Application</button>
+                </form>
+
+                <!-- Trust Elements -->
+                <div class="trust-elements">
+                    <div class="trust-item">
+                        <span class="trust-icon">🔒</span>
+                        <p>Secure & Confidential</p>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">✓</span>
+                        <p>90-Day Guarantee</p>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">⭐</span>
+                        <p>Limited Spots Available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ProTrain. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
