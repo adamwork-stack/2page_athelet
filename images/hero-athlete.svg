@@ -1,0 +1,31 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="athleteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B00;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0.6" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Silhouette of runner -->
+  <circle cx="300" cy="150" r="40" fill="url(#athleteGradient)" filter="url(#glow)"/>
+  <ellipse cx="300" cy="250" rx="60" ry="80" fill="url(#athleteGradient)" filter="url(#glow)"/>
+  <path d="M 240 350 L 300 450 L 360 350" fill="url(#athleteGradient)" filter="url(#glow)"/>
+  <path d="M 300 450 L 280 550 M 300 450 L 320 550" stroke="url(#athleteGradient)" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M 300 350 L 250 450 M 300 350 L 350 450" stroke="url(#athleteGradient)" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/>
+  
+  <!-- Speed lines -->
+  <line x1="100" y1="200" x2="200" y2="200" stroke="#FF6B00" stroke-width="3" opacity="0.5"/>
+  <line x1="100" y1="250" x2="220" y2="250" stroke="#FF6B00" stroke-width="3" opacity="0.5"/>
+  <line x1="100" y1="300" x2="200" y2="300" stroke="#FF6B00" stroke-width="3" opacity="0.5"/>
+  
+  <line x1="400" y1="200" x2="500" y2="200" stroke="#FF6B00" stroke-width="3" opacity="0.5"/>
+  <line x1="380" y1="250" x2="500" y2="250" stroke="#FF6B00" stroke-width="3" opacity="0.5"/>
+  <line x1="400" y1="300" x2="500" y2="300" stroke="#FF6B00" stroke-width="3" opacity="0.5"/>
+</svg>
